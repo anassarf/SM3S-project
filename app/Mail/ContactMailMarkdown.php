@@ -29,9 +29,9 @@ class ContactMailMarkdown extends Mailable
     public function build()
     {
            
-        //$from_email = $this->message['email'];
+        $from_email = $this->message['email'];
         return $this->subject($this->message['choice']= null)
-                    //->from($from_email)
+                    ->from($from_email)
                     ->markdown('emails.ContactMailMarkdown',array(
 
                                 'name' => $this->message['name'],
