@@ -20,8 +20,8 @@ class ContactController extends Controller
     {
         $Message_contact = $request -> only(['name','phone_number','email','choice','content']);
         
-        $title = $request->name.'Thank-You for your Messages';
-        Mail::to("nawfal.dev.test@gmail.com")->send(new ContactMailMarkdown($Message_contact));
+        $title = $request->name.' Thank-You for your Messages';
+        Mail::to("sm3s.societe@gmail.com")->send(new ContactMailMarkdown($Message_contact));
         Mail::to($request->email)->send(new ContactMailMarkdow2($Message_contact));
 
         Toastr::info('Email was sent !',$title );

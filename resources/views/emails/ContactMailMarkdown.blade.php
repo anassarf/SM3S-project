@@ -1,7 +1,7 @@
 @component('mail::message')
-# Introduction
 ### Nom:   {{ $name }}   
 ### Telephone:  {{ $phone }}
+### Sujet : {{ $subject }}
   
 @component('mail::panel')
     {{ $content }}
